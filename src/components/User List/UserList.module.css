@@ -1,4 +1,45 @@
-.user-list-wrapper{
-    width: 70%;
-    margin: 10px;
+.user-list-wrapper {
+  min-width: 80%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.page,
+.indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2em;
+  height: 2em;
+  color: gray;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.page {
+  border-radius: 3px;
+}
+
+.page:hover {
+  background-color: rgb(246, 152, 30);
+  color: white;
+}
+
+.indicators:hover {
+  color: rgb(246, 152, 30);
+}
+
+.indicators:active,
+.page:active {
+  transform: scale(0.9);
 }

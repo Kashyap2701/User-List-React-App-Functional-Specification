@@ -55,14 +55,14 @@ const userData = [
         status: 0, // 1 for active, 0 for inactive
         access: 'read'
       },
-      {
-        id: 8,
-        name: 'David Kim',
-        profileImg: 'https://randomuser.me/api/portraits/men/8.jpg',
-        email: 'davidkim@example.com',
-        status: 1, // 1 for active, 0 for inactive
-        access: 'manager'
-      },
+      // {
+      //   id: 8,
+      //   name: 'David Kim',
+      //   profileImg: 'https://randomuser.me/api/portraits/men/8.jpg',
+      //   email: 'davidkim@example.com',
+      //   status: 1, // 1 for active, 0 for inactive
+      //   access: 'manager'
+      // },
     // add more user data objects here as needed
   ];
 
