@@ -8,6 +8,10 @@ import { ArrowLeft } from "react-feather";
 import { ArrowRight } from "react-feather";
 
 function UserList() {
+  const pageChangeHandler = (data) => {
+    console.log(data);
+  };
+
   return (
     <div className={style["user-list-wrapper"]}>
       <div>
@@ -34,7 +38,10 @@ function UserList() {
         pageClassName={style.page}
         previousClassName={style.indicators}
         nextClassName={style.indicators}
+        activeClassName={style.activepage}
         pageCount={2}
+        initialPage={0}
+        onPageChange={pageChangeHandler}
       />
     </div>
   );

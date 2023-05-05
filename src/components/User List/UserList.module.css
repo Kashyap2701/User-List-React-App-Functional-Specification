@@ -30,7 +30,7 @@
   border-radius: 3px;
 }
 
-.page:hover {
+.activepage {
   background-color: rgb(246, 152, 30);
   color: white;
 }
