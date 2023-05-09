@@ -2,7 +2,7 @@
 
 This is a React application that displays a list of users on the left side and shows the details of a user on the right side when hovered over. The details of the user are displayed in a card format. The user list on the left side is populated with data retrieved from an API.
 
-- Live Link :
+- Live Link : https://tourmaline-cranachan-a0d6a5.netlify.app/
 
 ## API
 
