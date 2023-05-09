@@ -4,13 +4,11 @@ import React from "react";
 import Profile from "../Profile/Profile";
 import { Trash2, Lock } from "react-feather";
 
-// eslint-disable-next-line react/prop-types
 function User({ user }) {
   const iconStyle = {
     cursor: "pointer",
     opacity: "0.5",
   };
-
   const accessHandler = () => {};
 
   const statusHandler = () => {};
@@ -19,17 +17,17 @@ function User({ user }) {
     <tr>
       <td colSpan={2}>
         <Profile
-          name={user.name}
+          name={user.first_name + " " + user.last_name}
           email={user.email}
-          profileImg={user.profileImg}
+          profileImg={user.avatar}
         />
       </td>
-      {user.access !== "owner" ? (
+      {!user.owner ? (
         <>
           <td>
             <select
               name="status"
-              defaultValue={user.status.toString()}
+              defaultValue={Boolean(user.active)}
               onChange={statusHandler}
             >
               <option value="1">Active</option>
@@ -39,7 +37,7 @@ function User({ user }) {
           <td>
             <select
               name="access"
-              defaultValue={user.access}
+              defaultValue={user.role.toLowerCase()}
               onChange={accessHandler}
             >
               <option value="manager">Manager</option>
