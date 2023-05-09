@@ -18,15 +18,15 @@ const UserSlice = createSlice({
     },
     extraReducers: builder => {
         builder.addCase(fetchUserData.pending,state => {
-            state.isFetching = 'pending';
+            state.status = 'pending';
             state.users = [];
         }),
         builder.addCase(fetchUserData.fulfilled,(state, action) => {
-            state.isFetching = 'success';
+            state.status = 'success';
             state.users = action.payload.users;
         })
         builder.addCase(fetchUserData.rejected,state=>{
-            state.isFetching = 'error';
+            state.status = 'error';
             state.users = [];
         })
     }

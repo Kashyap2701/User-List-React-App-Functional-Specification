@@ -16,11 +16,9 @@ function UserList() {
   const status = useSelector((state) => state.user.status);
   const [currentPage, setCurrentPage] = useState(0);
   const dispatch = useDispatch();
-  const [isfirstLoad, setIsFirstLoad] = useState(false);
 
   useEffect(() => {
     dispatch(fetchUserData(currentPage));
-    setIsFirstLoad(true);
   }, [currentPage]);
 
   const pageChangeHandler = (data) => {
@@ -66,7 +64,7 @@ function UserList() {
           </div>
         </div>
       )}
-      {isfirstLoad && (
+      {status == "success" && (
         <ReactPaginate
           previousLabel={<ArrowLeft />}
           nextLabel={<ArrowRight />}
