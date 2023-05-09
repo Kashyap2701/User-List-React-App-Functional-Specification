@@ -11,6 +11,10 @@ img {
   -webkit-user-drag: none;
 }
 
+ul {
+  list-style-type: none;
+}
+
 table {
   display: table;
   width: 100%;
